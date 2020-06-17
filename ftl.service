@@ -1,0 +1,10 @@
+[Unit]
+Description=Pi-hole FTL DNS caching server with statistics
+After=network.target
+
+[Service]
+RuntimeDirectory=pihole
+ExecStart=/usr/bin/pihole-ftl -f -- -C /etc/pihole/dnsmasq.conf
+
+[Install]
+WantedBy=multi-user.target
