@@ -17,6 +17,7 @@ Source0: https://github.com/pi-hole/FTL/releases/download/v%{version}/%{nsfile}
 Source1: https://raw.githubusercontent.com/pi-hole/FTL/master/LICENSE
 Source2: ftl.service
 Source3: pihole-FTL.conf
+Source4: gravity.db.schema.sql
 
 BuildRequires: systemd
 
@@ -46,6 +47,7 @@ chmod 0755 %{buildroot}/usr/bin/pihole-ftl
 mv %{SOURCE1} FTL-COPYING
 mv %{SOURCE2} %{buildroot}/usr/lib/systemd/system/
 mv %{SOURCE3} %{buildroot}/etc/pihole
+mv %{SOURCE4} %{buildroot}/etc/pihole
 echo %{pihole-ftl_release} > FTL-RELEASE
 
 
@@ -53,6 +55,7 @@ echo %{pihole-ftl_release} > FTL-RELEASE
 %defattr(-,root,root)
 /usr/bin/pihole-ftl
 /usr/lib/systemd/system/ftl.service
+/etc/pihole/gravity.db.schema.sql
 %config(noreplace) /etc/pihole/pihole-FTL.conf
 %dir /etc/pihole
 %doc FTL-COPYING
