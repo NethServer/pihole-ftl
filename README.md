@@ -3,6 +3,7 @@
 The packages provides:
 - Pi-hole FTL binary
 - systemd unit
+- gravity.db sql schema
 
 RPM built from binaries available at [Pi-hole FTL repository](https://github.com/pi-hole/FTL/releases).
 
