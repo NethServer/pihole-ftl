@@ -5,6 +5,7 @@ After=network.target
 [Service]
 RuntimeDirectory=pihole
 ExecStart=/usr/bin/pihole-ftl -f -- -C /etc/pihole/dnsmasq.conf
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
