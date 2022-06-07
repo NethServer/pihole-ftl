@@ -1,7 +1,7 @@
 Summary: Pi-hole FTL binary
 Name: pihole-ftl
-Version: 5.0
-Release: 3%{?dist}
+Version: 5.14
+Release: 0%{?dist}
 License: GPL
 URL: https://github.com/pi-hole/FTL/releases
 %ifarch %{arm}
@@ -62,6 +62,9 @@ echo %{pihole-ftl_release} > FTL-RELEASE
 %doc FTL-RELEASE
 
 %changelog
+* Mon May 02 2022 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 5.14-0
+- Update to upstream 5.14 - NethServer/dev#6671
+
 * Thu Jul 02 2020 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 5.0-3
 - ftl config: add MAXLOGAGE and MAXDBDAYS options
 
